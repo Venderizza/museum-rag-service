@@ -1,0 +1,120 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.python-version
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# uv
+uv.lock
+
+# Poetry / PDM, if used later
+poetry.lock
+.pdm-python
+.pdm-build/
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.cache/
+
+# Type checking / linting
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+
+# FastAPI / local runtime
+*.log
+logs/
+tmp/
+temp/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Secrets / credentials
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+certs/
+secrets/
+
+# Docker / local volumes
+docker-compose.override.yml
+postgres_data/
+qdrant_data/
+redis_data/
+volumes/
+
+# Database dumps
+*.sql
+*.dump
+*.backup
+*.sqlite
+*.sqlite3
+*.db
+
+# Alembic temporary files
+alembic/*.pyc
+alembic/__pycache__/
+alembic/versions/__pycache__/
+
+# IDEs / editors
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Test artifacts
+test-results/
+reports/
+coverage.xml
+junit.xml
+
+# Local data / fixtures that may be large
+data/
+datasets/
+uploads/
+exports/
+
+# Qdrant snapshots / backups
+snapshots/
+storage/
+
+# Node / frontend artifacts, if added later
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+Thumbs.db
+Desktop.ini

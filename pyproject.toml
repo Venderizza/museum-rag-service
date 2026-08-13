@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "museum-rag-service"
+version = "0.1.0"
+description = "RAG service for museum exhibit documents"
+authors = ["Museum RAG Team"]
+readme = "README.md"
+packages = [{ include = "app" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.6"
+uvicorn = { extras = ["standard"], version = "^0.34.0" }
+pydantic = "^2.10.4"
+pydantic-settings = "^2.7.1"
+sqlalchemy = { extras = ["asyncio"], version = "^2.0.36" }
+asyncpg = "^0.30.0"
+alembic = "^1.14.0"
+qdrant-client = "^1.12.1"
+dramatiq = { extras = ["redis"], version = "^1.17.1" }
+redis = "^5.2.1"
+httpx = "^0.28.1"
+tenacity = "^9.0.0"
+structlog = "^24.4.0"
+python-json-logger = "^3.2.1"
+tiktoken = "^0.8.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-asyncio = "^0.25.0"
+httpx = "^0.28.1"
+ruff = "^0.8.4"
+mypy = "^1.14.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+strict = false
+ignore_missing_imports = true
